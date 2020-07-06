@@ -1,0 +1,49 @@
+{
+    "id": "myform",
+    "schemaVersion": "1.0.0",
+    "name": "myform",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "aprovando_candidato_setor_futebol_",
+            "type": "section",
+            "title": "Aprovando Candidato (Setor Futebol)",
+            "content": [
+                {
+                    "id": "jogador_",
+                    "type": "string",
+                    "label": "Jogador",
+                    "readOnly": true,
+                    "value": "${context.Nome}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "resposta",
+                    "type": "string",
+                    "label": "Resposta",
+                    "readOnly": true,
+                    "value": "${context.Resposta}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "aprovar",
+            "text": "Aprovar",
+            "decisionType": "positive"
+        },
+        {
+            "id": "rejeitar",
+            "text": "Rejeitar",
+            "decisionType": "negative"
+        }
+    ]
+}
